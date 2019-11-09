@@ -1,0 +1,62 @@
+﻿doctype html
+html
+   head
+      title Task App | Home
+      <!-- Encoding -->
+      meta(charset="utf-8")
+      <!-- Internet Explorer Compatiblity -->
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      <!-- Viewport Meta -->
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      <!-- Description Meta -->
+      meta(name="description", content="page description")
+      <!-- Keywords Meta -->
+      meta(name="keywords", content="hassan, ali")
+      <!-- Author Meta -->
+      meta(name="author", content="Hassan Ali")
+      <!-- Bootstrap Styles -->
+      link(rel="stylesheet", href="css/bootstrap.min.css")
+      <!-- Font Awesome -->
+      link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.7.2/css/all.css")
+      <!-- Fonts -->
+      link(href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|ZCOOL+KuaiLe&display=swap", rel="stylesheet")
+      <!-- Page Custom Styles -->
+      link(rel="stylesheet", href="css/home.css")
+      <!-- Page Icon -->
+      link(rel="shortcut icon", href="images/logo.png")
+
+   body
+      
+      //- Navbar
+      include ../components/navbar.pug
+      .header.noAuth 
+         .overlay
+            h1 TASK APP
+            p Save Your Tasks Easily, Don't Forget Your Dates, Meeting Or Lessons
+            span BY BroCoders&copy; 2019
+            .container
+               .row.justify-contnet-center
+                  .col-12.col-md-4
+                     .box
+                        img(src="images/manage.svg")
+                        h4 Manage Tasks
+                  .col-12.col-md-4
+                     .box
+                        img(src="images/sync.svg")
+                        h4 Sync Automaticlly
+                  .col-12.col-md-4
+                     .box
+                        img(src="images/use.svg")
+                        h4 Use Easily
+                        
+
+      <!-- JQuery Library v(3.4.1) -->
+      script(src="js/jquery-3.4.1.min.js")
+      <!-- Popper JS -->
+      script(src="js/popper.min.js")
+      <!-- Bootstrap JS v(4.2.1) -->
+      script(src="js/bootstrap.min.js")
+      <!-- Axsios -->
+      script(src="https://unpkg.com/axios/dist/axios.min.js")
+      <!-- Page Custom Scripts -->
+      script(src="js/custom.js")

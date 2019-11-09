@@ -1,0 +1,62 @@
+﻿doctype html
+html
+   head
+      title Task App | Signup
+      <!-- Encoding -->
+      meta(charset="utf-8")
+      <!-- Internet Explorer Compatiblity -->
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      <!-- Viewport Meta -->
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      <!-- Description Meta -->
+      meta(name="description", content="page description")
+      <!-- Keywords Meta -->
+      meta(name="keywords", content="hassan, ali")
+      <!-- Author Meta -->
+      meta(name="author", content="Hassan Ali")
+      <!-- Bootstrap Styles -->
+      link(rel="stylesheet", href="css/bootstrap.min.css")
+      <!-- Font Awesome -->
+      link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.7.2/css/all.css")
+      <!-- Fonts -->
+      link(href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|ZCOOL+KuaiLe&display=swap", rel="stylesheet")
+      <!-- Page Custom Styles -->
+      link(rel="stylesheet", href="css/home.css")
+      <!-- Page Icon -->
+      link(rel="shortcut icon", href="images/logo.png")
+
+   body
+      
+      //- Navbar
+      include ../components/navbar.pug
+      .header.noAuth 
+         .overlay
+            .container
+               .loginBox
+                  h1 SIGNUP
+                  if error
+                     p.alert.alert-danger.error=error
+                  form(action="/users", method="POST")
+                     label Username
+                     input.form-control(type="text", placeholder="Username", name="username")
+                     label Phone Number
+                     input.form-control(type="number", placeholder="Phone Number", name="phone")
+                     label Age
+                     input.form-control(type="number", placeholder="Age", name="age")
+                     label Email Address
+                     input.form-control(type="email", placeholder="Email Address", name="email")
+                     label Password
+                     input.form-control(type="password", placeholder="Password", name="password")
+                     label Confirm Password
+                     input.form-control(type="password", placeholder="Confirm Password", name="confirm password")
+                     button(type="submit") Signup
+                     p Do you have account? #[a(href="/login") Login]
+
+      <!-- JQuery Library v(3.4.1) -->
+      script(src="js/jquery-3.4.1.min.js")
+      <!-- Popper JS -->
+      script(src="js/popper.min.js")
+      <!-- Bootstrap JS v(4.2.1) -->
+      script(src="js/bootstrap.min.js")
+      <!-- Page Custom Scripts -->
+      script(src="js/custom.js")

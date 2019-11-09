@@ -1,0 +1,62 @@
+﻿doctype html
+html
+   head
+      title Task App | Tasks
+      <!-- Encoding -->
+      meta(charset="utf-8")
+      <!-- Internet Explorer Compatiblity -->
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      <!-- Viewport Meta -->
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      <!-- Description Meta -->
+      meta(name="description", content="page description")
+      <!-- Keywords Meta -->
+      meta(name="keywords", content="hassan, ali")
+      <!-- Author Meta -->
+      meta(name="author", content="Hassan Ali")
+      <!-- Bootstrap Styles -->
+      link(rel="stylesheet", href="css/bootstrap.min.css")
+      <!-- Font Awesome -->
+      link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.7.2/css/all.css")
+      <!-- Fonts -->
+      link(href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|ZCOOL+KuaiLe&display=swap", rel="stylesheet")
+      <!-- Page Custom Styles -->
+      link(rel="stylesheet", href="css/home.css")
+      <!-- Page Icon -->
+      link(rel="shortcut icon", href="images/logo.png")
+
+   body
+      
+      //- Navbar
+      include ../components/navbar.pug
+      .header.Auth 
+         .overlay
+            h1 TASK APP
+            span BY BroCoders&copy; 2019
+            .container
+               .row.justify-content-center
+                  .col-12.col-md-10.col-lg-9
+                     .tasksBox
+                        .head
+                           input.taskInput(type="text", placeholder="Add New Task")
+                           button.addTaskBtn Add Task
+                        .tasks
+                           if tasks.length
+                              each task in tasks
+                                 p.task #{task.content} #[i.far.fa-trash-alt.deleteTask(id=task._id)] #[i.fas.fa-edit.editTask(id=task._id)]
+                           else
+                              p.alert.alert-warning No Tasks Yet, Add Some Tasks
+                        
+
+      <!-- JQuery Library v(3.4.1) -->
+      script(src="js/jquery-3.4.1.min.js")
+      <!-- Popper JS -->
+      script(src="js/popper.min.js")
+      <!-- Bootstrap JS v(4.2.1) -->
+      script(src="js/bootstrap.min.js")
+      <!-- Axsios -->
+      script(src="https://unpkg.com/axios/dist/axios.min.js")
+      <!-- SweetAlert 2 -->
+      script(src="https://cdn.jsdelivr.net/npm/sweetalert2@9")
+      <!-- Page Custom Scripts -->
+      script(src="js/custom.js")

@@ -1,0 +1,17 @@
+﻿nav.navbar.navbar-expand-sm.navbar-light.bg-light
+  a.navbar-brand(href='./') TASK APP
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup')
+    span.navbar-toggler-icon
+  #navbarNavAltMarkup.collapse.navbar-collapse
+    .navbar-nav.ml-auto
+      if user
+        a.nav-item.nav-link.userImage(href="/profile", title="Profile")
+          - if (!user.photo)
+            img(src="./images/Unknown-person.png")
+          - else
+            img(src=`data:image/jpg;base64,${user.photo}`)
+          span.ml-2.mr-2=user.username
+        i.fas.fa-sign-out-alt.logout(title="Logout .. ?")
+      else
+        a.nav-item.nav-link(href='./login') Login
+        a.nav-item.nav-link(href='./signup') Signup
