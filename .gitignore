@@ -2,3 +2,4 @@
 assets/
 .vscode/
 gulpfile.js
+config.env
